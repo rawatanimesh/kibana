@@ -16,8 +16,21 @@
   margin-right: $euiSize;
 }
 
+.chrHeaderWrapper {
+  .euiHeader--fixed{
+    background-color: #001D6D;
+    color: #FFF;
+  }
+  .euiHeaderSectionItem__button:hover{
+    color: #001D6D;
+  }
+}
+
 .header__toggleNavButtonSection {
   .euiBody--collapsibleNavIsDocked & {
     display: none;
   }
+  // .euiHeaderSectionItem__button:focus{
+  //   background: none;
+  // }
 }

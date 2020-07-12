@@ -38,6 +38,37 @@ export const Template: FunctionComponent<Props> = ({
     strictCsp,
   },
 }) => {
+  const logo2 = (
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="32" height="32" viewBox="0 0 160.000000 144.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,144.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M655 1430 c-234 -47 -420 -240 -433 -448 l-5 -77 -58 -53 c-44 -40
+-69 -75 -101 -140 l-43 -86 -2 -140 c0 -78 -4 -164 -8 -192 -15 -107 41 -201
+153 -256 62 -31 73 -33 162 -32 73 1 109 6 155 24 33 12 65 27 71 31 7 6 39 2
+80 -8 93 -23 406 -23 511 0 192 42 338 170 417 365 29 73 31 84 31 212 0 134
+0 135 -36 210 -60 125 -178 235 -339 315 -43 22 -63 40 -93 86 -98 151 -281
+225 -462 189z m219 -129 c75 -37 148 -108 182 -177 23 -48 29 -52 68 -58 59
+-9 156 -57 207 -103 105 -94 154 -219 147 -375 -3 -78 -9 -104 -35 -160 -40
+-86 -84 -140 -152 -189 -87 -62 -157 -79 -332 -79 l-149 0 0 203 0 202 -29 17
+c-85 48 -89 180 -7 233 61 40 150 22 187 -39 39 -64 14 -171 -46 -198 l-25
+-11 0 -165 0 -165 108 6 c147 7 208 31 288 111 118 118 145 286 69 436 -51
+101 -165 180 -280 195 l-55 6 -29 63 c-36 79 -76 125 -143 162 -46 25 -63 29
+-133 29 -70 0 -87 -4 -133 -29 -60 -34 -101 -76 -134 -139 -17 -33 -22 -59
+-22 -122 0 -44 3 -101 8 -127 l9 -47 -59 -26 c-84 -37 -119 -68 -149 -130 -21
+-43 -28 -70 -28 -119 1 -35 4 -69 7 -75 4 -6 25 -11 47 -11 85 0 139 -57 139
+-147 0 -41 -5 -58 -26 -83 -66 -78 -154 -80 -224 -5 -22 23 -25 34 -23 93 1
+37 2 85 1 107 -7 181 -3 219 27 278 31 63 94 127 150 154 l34 16 -6 71 c-13
+159 61 305 196 384 104 61 237 66 345 13z"/>
+<path d="M797 752 c-23 -25 -22 -85 1 -105 28 -25 87 -22 106 5 22 31 20 74
+-4 98 -26 26 -81 26 -103 2z"/>
+<path d="M215 325 c-28 -27 -31 -45 -14 -78 16 -29 28 -37 61 -37 33 0 68 35
+68 67 0 30 -42 73 -70 73 -11 0 -32 -11 -45 -25z"/>
+</g>
+</svg>
+  );
   const logo = (
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
       <g fill="none">
@@ -74,7 +105,7 @@ export const Template: FunctionComponent<Props> = ({
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width" />
-        <title>Elastic</title>
+        <title>RCP Kibana</title>
         <Fonts url={uiPublicUrl} />
         {/* Favicons (generated from http://realfavicongenerator.net/) */}
         <link
@@ -86,21 +117,21 @@ export const Template: FunctionComponent<Props> = ({
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`${uiPublicUrl}/favicons/favicon-32x32.png`}
+          href={`${uiPublicUrl}/favicons/rcp-icons/favicon-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`${uiPublicUrl}/favicons/favicon-16x16.png`}
+          href={`${uiPublicUrl}/favicons/rcp-icons/favicon-16x16.png`}
         />
-        <link rel="manifest" href={`${uiPublicUrl}/favicons/manifest.json`} />
+        <link rel="manifest" href={`${uiPublicUrl}/favicons/rcp-icons/manifest.json`} />
         <link
           rel="mask-icon"
           color="#e8488b"
           href={`${uiPublicUrl}/favicons/safari-pinned-tab.svg`}
         />
-        <link rel="shortcut icon" href={`${uiPublicUrl}/favicons/favicon.ico`} />
+        <link rel="shortcut icon" href={`${uiPublicUrl}/favicons/favicon.png`} />
         <meta name="msapplication-config" content={`${uiPublicUrl}/favicons/browserconfig.xml`} />
         <meta name="theme-color" content="#ffffff" />
         <Styles darkMode={darkMode} />
@@ -121,22 +152,22 @@ export const Template: FunctionComponent<Props> = ({
           data-test-subj="kbnLoadingMessage"
         >
           <div className="kbnLoaderWrap">
-            {logo}
+            {logo2}
             <div
               className="kbnWelcomeText"
               data-error-message={i18n('core.ui.welcomeErrorMessage', {
                 defaultMessage:
-                  'Elastic did not load properly. Check the server output for more information.',
+                  'RCP Kibana did not load properly. Check the server output for more information.',
               })}
             >
-              {i18n('core.ui.welcomeMessage', { defaultMessage: 'Loading Elastic' })}
+              {i18n('core.ui.welcomeMessage', { defaultMessage: 'Loading RCP Kibana' })}
             </div>
             <div className="kbnProgress" />
           </div>
         </div>
 
         <div className="kbnWelcomeView" id="kbn_legacy_browser_error" style={{ display: 'none' }}>
-          {logo}
+          {logo2}
 
           <h2 className="kbnWelcomeTitle">
             {i18n('core.ui.legacyBrowserTitle', {
@@ -146,7 +177,7 @@ export const Template: FunctionComponent<Props> = ({
           <div className="kbnWelcomeText">
             {i18n('core.ui.legacyBrowserMessage', {
               defaultMessage:
-                'This Elastic installation has strict security requirements enabled that your current browser does not meet.',
+                'This RCP Kibana installation has strict security requirements enabled that your current browser does not meet.',
             })}
           </div>
         </div>

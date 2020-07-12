@@ -34,7 +34,7 @@ function findClosestAnchor(element: HTMLElement): HTMLAnchorElement | void {
 
     if (!current.parentElement || current.parentElement === document.body) {
       return undefined;
-    }
+    } 
 
     current = current.parentElement;
   }

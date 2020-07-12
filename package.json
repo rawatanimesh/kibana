@@ -74,7 +74,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elastic/kibana.git"
+    "url": "git+https://github.com/elastic/kibana.git"
   },
   "resolutions": {
     "**/@types/node": ">=10.17.17 <10.20.0",
@@ -221,6 +221,7 @@
     "monaco-editor": "~0.17.0",
     "mustache": "2.3.2",
     "ngreact": "0.5.1",
+    "node": "^12.18.1",
     "node-fetch": "1.7.3",
     "node-forge": "^0.9.1",
     "opn": "^5.5.0",
@@ -498,7 +499,14 @@
     "zlib": "^1.0.5"
   },
   "engines": {
-    "node": "10.21.0",
+    "node": "12.18.1",
     "yarn": "^1.21.1"
-  }
+  },
+  "main": ".eslintrc.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "test"
+  },
+  "license": "ISC"
 }
