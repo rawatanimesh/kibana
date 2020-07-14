@@ -113,9 +113,9 @@ export const Styles: FunctionComponent<Props> = ({ darkMode }) => {
           }
 
           .kbnLoaderWrap svg {
-            width: 64px;
-            height: 64px;
-            margin: auto;
+            width: 275px;
+            height: 32px;
+            margin: 0 auto;
             line-height: 1;
           }
 

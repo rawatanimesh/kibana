@@ -7,3 +7,18 @@
   min-width: 100%;
   min-height: 100%;
 }
+.embPanel{
+  border: 1px solid #001D6D;
+  border-radius: 1.5%;
+  h2{
+    background-color: #001D6D;
+    color: #FFF;
+  }
+  .embPanel__optionsMenuPopover{
+    background-color: #001D6D;
+    .embPanel__optionsMenuButton{
+      color: #FFF;
+    }
+  }
+}
+
