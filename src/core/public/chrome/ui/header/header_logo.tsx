@@ -24,6 +24,8 @@ import { useObservable } from 'react-use';
 import { Observable } from 'rxjs';
 import Url from 'url';
 import { ChromeNavLink } from '../..';
+import rcpLogo from '../../../../server/core_app/assets/favicons/rcp-icons/RCP-short.svg';
+import { style } from 'src/plugins/expressions';
 
 function findClosestAnchor(element: HTMLElement): HTMLAnchorElement | void {
   let current = element;
@@ -98,14 +100,22 @@ export function HeaderLogo({ href, navigateToApp, ...observables }: Props) {
   const navLinks = useObservable(observables.navLinks$, []);
 
   return (
-    <EuiHeaderLogo
-      data-test-subj="logo"
-      iconType="logoElastic"
-      onClick={(e) => onClick(e, forceNavigation, navLinks, navigateToApp)}
-      href={href}
-      aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.goHomePageIconAriaLabel', {
-        defaultMessage: 'Go to home page',
-      })}
-    />
+    // <EuiHeaderLogo
+    //   data-test-subj="logo"
+    //   iconType="logoElastic"
+    //   onClick={(e) => onClick(e, forceNavigation, navLinks, navigateToApp)}
+    //   href={href}
+    //   aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.goHomePageIconAriaLabel', {
+    //     defaultMessage: 'Go to home page',
+    //   })}
+    // />
+    <div style={{padding:'0 4px'}}>
+      <a onClick={(e) => onClick(e, forceNavigation, navLinks, navigateToApp)}
+        href={href}
+        aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.goHomePageIconAriaLabel', {
+        defaultMessage: 'Go to home page', })}>
+        <img src={rcpLogo} />
+     </a>
+    </div>
   );
 }
