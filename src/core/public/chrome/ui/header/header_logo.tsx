@@ -116,6 +116,6 @@ export function HeaderLogo({ href, navigateToApp, ...observables }: Props) {
         defaultMessage: 'Go to home page', })}>
         <img src={rcpLogo} />
      </a>
-    </div>
+    </div> 
   );
 }

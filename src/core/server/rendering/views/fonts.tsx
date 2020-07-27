@@ -39,6 +39,28 @@ interface FontFace {
 }
 
 export const Fonts: FunctionComponent<Props> = ({ url }) => {
+  /* noto-sans-regular - latin */
+  const notoSans: FontFace = {
+    family: 'Noto Sans',
+    variants: [ 
+      {
+        style:'normal',
+        weight: 400,
+        sources: [
+          `${url}/fonts/noto_sans/noto-sans-v9-latin-regular.woff2`,
+          `${url}/fonts/noto_sans/noto-sans-v9-latin-regular.woff`,
+        ]
+      },
+      {
+        style:'normal',
+        weight: 700,
+        sources: [
+          `${url}/fonts/noto_sans/noto-sans-v9-latin-700.woff2`,
+          `${url}/fonts/noto_sans/noto-sans-v9-latin-700.woff`,
+        ]
+      }
+    ]
+  }
   const interUi: FontFace = {
     family: 'Inter UI',
     variants: [
@@ -245,7 +267,7 @@ export const Fonts: FunctionComponent<Props> = ({ url }) => {
     <style
       dangerouslySetInnerHTML={{
         __html: `
-        ${[interUi, roboto]
+        ${[notoSans,interUi, roboto]
           .flatMap(({ family, variants }) =>
             variants.map(({ style, weight, format, sources, unicodeRange }) => {
               const src = sources

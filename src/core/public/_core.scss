@@ -8,17 +8,47 @@
   min-height: 100%;
 }
 .embPanel{
-  border: 1px solid #001D6D;
-  border-radius: 1.5%;
+  // border: 1px solid #001D6D;
+  font-family: 'Noto Sans', sans-serif;
+  border-radius: 0.4996875em;
+  box-shadow: 0 0 0.3em rgba(0,0,0,.2);
+  // padding: 2.5px;
   h2{
-    background-color: #001D6D;
-    color: #FFF;
+    font-weight: 700;
+    background-color: #FFF;
+    color: #333;
+    height: 51.52px;
+    padding-left: 13.135px;
+    border-bottom: 1px solid #ebebeb;
   }
   .embPanel__optionsMenuPopover{
-    background-color: #001D6D;
-    .embPanel__optionsMenuButton{
-      color: #FFF;
+    background-color: #FFF;
+    padding-right: 13.135px;
+    height: 51.52px;
+    line-height: 51.52px;
+    border-bottom: 1px solid #ebebeb;
+    .euiButtonIcon .euiButtonIcon--text .embPanel__optionsMenuButton,.embPanel__optionsMenuButton:focus{
+      color: rgb(156, 156, 156);
+      background: transparent;
+      transform: rotate(90deg) !important;
+      opacity: 1 !important;
     }
+    .euiButtonIcon:hover:not(:disabled), .euiButtonIcon:focus {
+      text-decoration: none;
+      transform: translateY(0px);
+      transform: rotate(90deg) !important;
   }
+  }
+}
+.react-grid-item {
+  padding: 2.5px;
+}
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+.euiLink.euiLink--subdued,.euiLink.euiLink--subdued:hover {
+  color: #ff008c;
+  text-decoration: none;
+  /* color: #6a717d; */
 }
 
