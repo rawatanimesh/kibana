@@ -27,7 +27,8 @@
     height: 51.52px;
     line-height: 51.52px;
     border-bottom: 1px solid #ebebeb;
-    .euiButtonIcon .euiButtonIcon--text .embPanel__optionsMenuButton,.embPanel__optionsMenuButton:focus{
+    .euiButtonIcon .euiButtonIcon--text .embPanel__optionsMenuButton,.embPanel__optionsMenuButton:focus,
+    .embPanel__optionsMenuButton:not(:disabled){
       color: rgb(156, 156, 156);
       background: transparent;
       transform: rotate(90deg) !important;
