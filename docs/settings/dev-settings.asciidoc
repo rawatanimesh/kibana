@@ -14,7 +14,7 @@ They are enabled by default.
 
 [cols="2*<"]
 |===
-| `xpack.grokdebugger.enabled`
+| `xpack.grokdebugger.enabled` {ess-icon}
   | Set to `true` to enable the <<xpack-grokdebugger,Grok Debugger>>. Defaults to `true`.
 
 |===
@@ -27,5 +27,16 @@ They are enabled by default.
 |===
 | `xpack.searchprofiler.enabled`
   | Set to `true` to enable the <<xpack-profiler,{searchprofiler}>>. Defaults to `true`.
+
+|===
+
+[float]
+[[painless_lab-settings]]
+==== Painless Lab settings
+
+[cols="2*<"]
+|===
+| `xpack.painless_lab.enabled`
+  | When set to `true`, enables the <<painlesslab, Painless Lab>>. Defaults to `true`.
 
 |===
