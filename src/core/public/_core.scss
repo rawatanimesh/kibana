@@ -70,6 +70,36 @@
 
 /* ------------------GLOBAL COMPONENTS---------------- */
 
+/*------------------scroll bar style------------------*/
+
+//width
+::-webkit-scrollbar {
+  width: 0.43936731107205623em;
+  height: 0.43936731107205623em;
+}
+// Track
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0.455em;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #e6ebef;
+}
+// Handle
+::-webkit-scrollbar-thumb {
+  opacity: 0.4;
+  background: #9696b2;
+  border-radius: 0.455em;
+  width: 0.909em;
+  cursor: pointer;
+}
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+  background: #000037;
+}
+
 /* ------------------BUTTON---------------- */
 
 /* ------------------OUTLINE BUTTON---------------- */
@@ -253,6 +283,14 @@
 .euiSwitch.euiSwitch--compressed .euiSwitch__thumb{
   border: 1px solid $greyColor2 !important;
 }
+// :disabled
+.euiSwitch .euiSwitch__button:disabled .euiSwitch__thumb{
+  background-color:#FFF !important;
+  border: none !important;
+}
+.euiSwitch .euiSwitch__button:disabled .euiSwitch__body{
+  background-color: $greyColor5 !important;
+}
 
 /* ------------------CHECKBOX---------------*/
 .euiCheckbox .euiCheckbox__input + .euiCheckbox__square{
@@ -297,6 +335,95 @@
 .euiRadio .euiRadio__input[disabled] + .euiRadio__circle{
   background-color: #fff;
   border: 2px solid $greyColor5;
+}
+
+/*--------------INPUT FORM FIELDS------------------*/
+
+// form label
+.euiFormLabel{
+  font-size: 12px !important;
+  color: $greyColor1 !important;
+  font-weight: normal !important;
+}
+.euiFormLabel.euiFormLabel-isFocused{
+  color: $redColor2 !important;
+}
+
+// hover on form row
+.euiFormRow:hover .euiFormLabel,.euiFormLabel:hover {
+  color: $primaryHoverColor !important;
+}
+.euiFormRow:hover .euiComboBox.euiComboBox--compressed .euiComboBox__inputWrap, .euiComboBox.euiComboBox--compressed:hover .euiComboBox__inputWrap:hover {
+  border: 1px solid $primaryHoverColor !important;
+}
+.euiFormRow:hover .euiFieldText--compressed, .euiFieldText--compressed:hover{
+  border: 1px solid $primaryHoverColor !important;
+}
+.euiFormRow:hover .euiSelect--compressed, .euiSelect--compressed:hover{
+  border: 1px solid $primaryHoverColor !important;
+}
+.euiFormRow:hover .euiFieldNumber--compressed, .euiFieldNumber--compressed:hover{
+  border: 1px solid $primaryHoverColor !important;
+}
+
+/*-------------- drop down input field----------*/
+
+.euiComboBox.euiComboBox--compressed .euiComboBox__inputWrap{
+  border: 1px solid $greyColor2 !important;
+  border-radius: 4px !important;
+}
+.euiComboBox.euiComboBox-isOpen .euiComboBox__inputWrap{
+  background-image: none !important;
+}
+.euiComboBox.euiComboBox-isOpen .euiComboBox__inputWrap--compressed{
+  background-image: none !important;
+}
+
+// drop down list of input field
+.euiFilterSelectItem{
+  // height: 40px !important;
+  font-size: 14px !important;
+  color: $greyColor1 !important;
+  border-bottom: transparent !important;
+}
+.euiFilterSelectItem:focus{
+  text-decoration: none !important;
+  // background: $primaryHoverColor !important;
+  // color: #fff !important;
+}
+
+/*-------------- compressed dropdown input field----------*/
+.euiSelect--compressed{
+  border: 1px solid $greyColor2 !important;
+  border-radius: 4px !important;
+}
+// :focus
+.euiSelect--compressed:focus,.euiSelect:focus{
+  border: 1px solid $redColor2 !important;
+  background-image: none !important;
+}
+
+
+/*-------------- input field----------*/
+
+.euiFieldText--compressed{
+  border: 1px solid $greyColor2 !important;
+  border-radius: 4px !important;
+}
+.euiFieldText--compressed:focus, .euiFieldText:focus{
+  border: 1px solid $redColor2 !important;
+  background-image: none !important;
+}
+
+/*-------------- number input field----------*/
+
+.euiFieldNumber--compressed{
+  border: 1px solid $greyColor2 !important;
+  border-radius: 4px !important;
+}
+.euiFieldNumber--compressed:focus,.euiFieldNumber:focus{
+  border: 1px solid $redColor2 !important;
+  background-image: none !important;
 }
 
 
