@@ -64,6 +64,9 @@
 .kbnWelcomeText{
   font-family: $rcpFont !important;
 }
+:focus:not([class^='eui']):not(.kbn-resetFocusState){
+  animation: none !important;
+}
 
 /* ------------------GLOBAL COMPONENTS---------------- */
 
@@ -234,6 +237,22 @@
 }
 
 /* ------------------TOGGLE BUTTON---------------*/
+.euiSwitch .euiSwitch__body{
+  background-color: $redColor2 !important;
+}
+.euiSwitch .euiSwitch__button[aria-checked='false'] .euiSwitch__body{
+  background-color: $greyColor2 !important;
+}
+// toggle short version
+.euiSwitch.euiSwitch--compressed .euiSwitch__button[aria-checked='true'] .euiSwitch__thumb, .euiSwitch.euiSwitch--mini .euiSwitch__button[aria-checked='true'] .euiSwitch__thumb{
+  border-color: transparent !important;
+}
+.euiSwitch.euiSwitch--compressed .euiSwitch__button[aria-checked='false'] .euiSwitch__thumb, .euiSwitch.euiSwitch--compressed .euiSwitch__button[aria-checked='true']:disabled .euiSwitch__thumb, .euiSwitch.euiSwitch--mini .euiSwitch__button[aria-checked='false'] .euiSwitch__thumb, .euiSwitch.euiSwitch--mini .euiSwitch__button[aria-checked='true']:disabled .euiSwitch__thumb{
+  border-color: $greyColor2 !important;
+}
+.euiSwitch.euiSwitch--compressed .euiSwitch__thumb{
+  border: 1px solid $greyColor2 !important;
+}
 
 /* ------------------CHECKBOX---------------*/
 .euiCheckbox .euiCheckbox__input + .euiCheckbox__square{
@@ -252,6 +271,32 @@
 .euiCheckbox .euiCheckbox__input:checked + .euiCheckbox__square{
   border: 2px solid $redColor2 !important;
   background-color: $redColor2 !important;
+}
+// focused
+.euiSwitch .euiSwitch__button:focus .euiSwitch__track{
+  animation: none !important;
+  border-color: transparent !important;
+}
+
+/*--------------RADIO BUTTONS---------------*/
+
+.euiRadio .euiRadio__input + .euiRadio__circle{
+  border: 2px solid $greyColor1 !important;
+}
+
+.euiRadio .euiRadio__input:checked + .euiRadio__circle{
+  border-color: $redColor2 !important;
+  background-color: $redColor2 !important;
+}
+// focused
+.euiRadio .euiRadio__input:focus + .euiRadio__circle, .euiRadio .euiRadio__input:active:not(:disabled) + .euiRadio__circle{
+  animation: none !important;
+  border-color: transparent !important;
+}
+// :disabled
+.euiRadio .euiRadio__input[disabled] + .euiRadio__circle{
+  background-color: #fff;
+  border: 2px solid $greyColor5;
 }
 
 
