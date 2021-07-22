@@ -137,7 +137,7 @@ c-85 48 -89 180 -7 233 61 40 150 22 187 -39 39 -64 14 -171 -46 -198 l-25
           color="#e8488b"
           href={`${uiPublicUrl}/favicons/safari-pinned-tab.svg`}
         />
-        <link rel="shortcut icon" href={`${uiPublicUrl}/favicons/favicon.png`} />
+        <link rel="shortcut icon" href={`${uiPublicUrl}/favicons/rcp-favicon.ico`} />
         <meta name="msapplication-config" content={`${uiPublicUrl}/favicons/browserconfig.xml`} />
         <meta name="theme-color" content="#ffffff" />
         <Styles darkMode={darkMode} />

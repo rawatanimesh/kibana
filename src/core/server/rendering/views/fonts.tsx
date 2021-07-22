@@ -39,10 +39,71 @@ interface FontFace {
 }
 
 export const Fonts: FunctionComponent<Props> = ({ url }) => {
+  const rakutenSans: FontFace = {
+    family: 'Rakuten Sans UI',
+    variants:[
+      {
+        style:'normal',
+        weight: 300,
+        sources: [
+          `${url}/fonts/rakuten_sans/RakutenSansUI_W_Lt.woff2`,
+          `${url}/fonts/rakuten_sans/RakutenSansUI_W_Lt.woff`,
+        ]
+      },
+      {
+        style:'italic',
+        weight: 300,
+        sources: [
+          `${url}/fonts/rakuten_sans/RakutenSansUI_W_LtIt.woff2`,
+          `${url}/fonts/rakuten_sans/RakutenSansUI_W_LtIt.woff`,
+        ]
+      },
+      {
+        style:'normal',
+        weight: 400,
+        sources: [
+          `${url}/fonts/noto_sans/RakutenSansUI_W_Rg.woff2`,
+          `${url}/fonts/noto_sans/RakutenSansUI_W_Rg.woff`,
+        ]
+      },
+      {
+        style:'normal',
+        weight: 600,
+        sources: [
+          `${url}/fonts/noto_sans/RakutenSansUI_W_SBd.woff2`,
+          `${url}/fonts/noto_sans/RakutenSansUI_W_SBd.woff`,
+        ]
+      },
+      {
+        style:'italic',
+        weight: 600,
+        sources: [
+          `${url}/fonts/noto_sans/RakutenSansUI_W_SBdIt.woff2`,
+          `${url}/fonts/noto_sans/RakutenSansUI_W_SBdIt.woff`,
+        ]
+      },
+      {
+        style:'normal',
+        weight: 700,
+        sources: [
+          `${url}/fonts/noto_sans/RakutenSansUI_W_Bd.woff2`,
+          `${url}/fonts/noto_sans/RakutenSansUI_W_Bd.woff`,
+        ]
+      },
+      {
+        style:'italic',
+        weight: 700,
+        sources: [
+          `${url}/fonts/noto_sans/RakutenSansUI_W_BdIt.woff2`,
+          `${url}/fonts/noto_sans/RakutenSansUI_W_BdIt.woff`,
+        ]
+      }
+    ]
+  }
   /* noto-sans-regular - latin */
   const notoSans: FontFace = {
     family: 'Noto Sans',
-    variants: [ 
+    variants: [
       {
         style:'normal',
         weight: 400,
@@ -267,7 +328,7 @@ export const Fonts: FunctionComponent<Props> = ({ url }) => {
     <style
       dangerouslySetInnerHTML={{
         __html: `
-        ${[notoSans,interUi, roboto]
+        ${[rakutenSans,notoSans,interUi, roboto]
           .flatMap(({ family, variants }) =>
             variants.map(({ style, weight, format, sources, unicodeRange }) => {
               const src = sources

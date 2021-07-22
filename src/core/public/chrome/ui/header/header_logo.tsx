@@ -24,7 +24,7 @@ import { useObservable } from 'react-use';
 import { Observable } from 'rxjs';
 import Url from 'url';
 import { ChromeNavLink } from '../..';
-import rcpLogo from '../../../../server/core_app/assets/favicons/rcp-icons/RCP-short.svg';
+import rcpLogo from '../../../../server/core_app/assets/favicons/rcp-icons/rcp-short-black.svg';
 import { style } from 'src/plugins/expressions';
 
 function findClosestAnchor(element: HTMLElement): HTMLAnchorElement | void {
@@ -36,7 +36,7 @@ function findClosestAnchor(element: HTMLElement): HTMLAnchorElement | void {
 
     if (!current.parentElement || current.parentElement === document.body) {
       return undefined;
-    } 
+    }
 
     current = current.parentElement;
   }
@@ -114,8 +114,8 @@ export function HeaderLogo({ href, navigateToApp, ...observables }: Props) {
         href={href}
         aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.goHomePageIconAriaLabel', {
         defaultMessage: 'Go to home page', })}>
-        <img src={rcpLogo} />
+        <img style={{height:'45px'}} src={rcpLogo} />
      </a>
-    </div> 
+    </div>
   );
 }

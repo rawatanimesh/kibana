@@ -18,11 +18,11 @@
 
 .chrHeaderWrapper {
   .euiHeader--fixed{
-    background-color: #001D6D;
-    color: #FFF;
+    background-color: #FFF !important;
+    color: #333333 !important;
   }
   .euiHeaderSectionItem__button:hover{
-    color: #001D6D;
+    color: #A53159 !important;
   }
 }
 

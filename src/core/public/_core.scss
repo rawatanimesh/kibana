@@ -2,6 +2,13 @@
  * designed to emulate root-element stretching and overflow
  * prevention previously handled in kbn_chrome.less
  */
+ @import './rcp_variables.scss';
+ body{
+  font-family: $rcpFont !important;
+}
+// a{
+//   color: $primaryColor !important;
+// }
 .coreSystemRootDomElement {
   overflow-x: hidden;
   min-width: 100%;
@@ -9,9 +16,9 @@
 }
 .embPanel{
   // border: 1px solid #001D6D;
-  font-family: 'Noto Sans', sans-serif;
-  border-radius: 0.4996875em;
-  box-shadow: 0 0 0.3em rgba(0,0,0,.2);
+  font-family: $rcpFont !important;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
   // padding: 2.5px;
   h2{
     font-weight: 700;
@@ -31,25 +38,183 @@
     .embPanel__optionsMenuButton:not(:disabled){
       color: rgb(156, 156, 156);
       background: transparent;
-      transform: rotate(90deg) !important;
+      // transform: rotate(90deg) !important;
       opacity: 1 !important;
     }
     .euiButtonIcon:hover:not(:disabled), .euiButtonIcon:focus {
       text-decoration: none;
-      transform: translateY(0px);
-      transform: rotate(90deg) !important;
-  }
+      // transform: translateY(0px);
+      // transform: rotate(90deg) !important;
+    }
   }
 }
 .react-grid-item {
   padding: 2.5px;
 }
-body{
-  font-family: 'Noto Sans', sans-serif;
-}
 .euiLink.euiLink--subdued,.euiLink.euiLink--subdued:hover {
-  color: #ff008c;
+  color: $primaryColor;
   text-decoration: none;
   /* color: #6a717d; */
 }
+.euiLink.euiLink--subdued:focus{
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+.kbnWelcomeText{
+  font-family: $rcpFont !important;
+}
+
+/* ------------------GLOBAL COMPONENTS---------------- */
+
+/* ------------------BUTTON---------------- */
+
+/* ------------------OUTLINE BUTTON---------------- */
+.euiButton{
+  font-family: $rcpFont !important;
+  box-shadow: none !important;
+}
+.euiButton--primary{
+  color: $primaryColor;
+  border-color: $primaryColor;
+}
+.euiButton:hover:not(:disabled), .euiButton:focus {
+  text-decoration: none;
+  background-color: $redColor2 !important;
+  border-color: $redColor2 !important;
+  color: #fff;
+}
+.euiButton:hover:not(:disabled){
+  -webkit-transform: none;
+  transform: none;
+}
+
+// :hover
+.euiButton:hover, .euiButton:active{
+  box-shadow: none !important;
+}
+.euiButton:hover:not(:disabled){
+  background-color: $primaryHoverColor !important;
+  border-color: $primaryHoverColor !important;
+  color: #fff;
+}
+// :focus
+.euiButton:focus{
+  animation: none !important;
+}
+
+/*----------------------FILLED BUTTON------------*/
+.euiButton--primary.euiButton--fill{
+  background-color: $primaryColor !important;
+  border-color: $primaryColor !important;
+}
+
+/* ------------------LINK BUTTON--------------- */
+
+.euiLink.euiLink--primary {
+  color: $primaryColor !important;
+}
+.euiLink.euiLink--primary:hover {
+  color: $primaryHoverColor !important;
+}
+.euiLink:hover{
+  text-decoration: none;
+}
+.euiLink.euiLink--primary:focus{
+  outline: none !important;
+  background-color: transparent !important;
+}
+.euiLink:focus{
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+/* ------------------LINK BUTTON 2----------------*/
+
+.euiButtonEmpty--primary{
+  color: $primaryColor !important;
+}
+.euiButtonEmpty:hover:not(:disabled), .euiButtonEmpty:focus{
+  text-decoration: none;
+  color: $primaryHoverColor !important;
+}
+.euiButtonEmpty--primary:focus{
+  background-color: transparent;
+}
+
+
+/* ------------------SIDE MENU--------------- */
+
+.euiListGroupItem.euiListGroupItem-isClickable:focus-within{
+  background-color: #FFE8E8;
+}
+.euiListGroupItem--text .euiListGroupItem__text:not(:disabled), .euiListGroupItem--text .euiListGroupItem__button:not(:disabled){
+  color: #90003B;
+}
+.euiListGroupItem.euiListGroupItem-isClickable:hover .euiListGroupItem__button, .euiListGroupItem .euiListGroupItem__button:hover, .euiListGroupItem .euiListGroupItem__button:focus{
+  text-decoration: none;
+}
+.euiListGroupItem.euiListGroupItem-isClickable:hover .euiListGroupItem__button, .euiListGroupItem .euiListGroupItem__button:hover, .euiListGroupItem .euiListGroupItem__button:focus{
+  text-decoration: none;
+}
+.euiAccordion__button:hover, .euiAccordion__button:focus{
+  text-decoration: none;
+}
+.euiAccordion__button:focus .euiAccordion__iconWrapper{
+  color: $redColor2;
+  animation: none !important;
+}
+
+//sidebar hover
+.euiListGroupItem.euiListGroupItem-isActive, .euiListGroupItem.euiListGroupItem-isClickable:hover{
+  background-color: $primaryHoverColor;
+  .euiListGroupItem__button{
+    color: #fff;
+  }
+}
+
+/* ------------------NAV TABS--------------- */
+
+.euiTab{
+  color: $greyColor1;
+}
+.euiTab__content{
+  font-family: $rcpFont !important;
+}
+.euiTab:focus{
+  background-color: transparent;
+  text-decoration: none;
+}
+.euiTab.euiTab-isSelected{
+  color: $redColor2 !important;
+}
+.euiTab.euiTab-isSelected:hover{
+  color: $redColor3;
+}
+.euiTab.euiTab-isSelected::after{
+  background-color: $redColor2 !important;
+}
+.euiTab:hover:not(.euiTab-isSelected){
+  text-decoration: none;
+  color: $redColor3;
+}
+
+/* ------------------HEADER ICONS---------------*/
+
+.euiHeaderSectionItem__button{
+  color: $greyColor2 !important;
+}
+.euiHeaderSectionItem__button:hover{
+  color: $primaryHoverColor !important;
+}
+.euiHeaderSectionItem__button:hover{
+  background-color: transparent;
+}
+.euiHeaderSectionItem__button:focus{
+  background: transparent;
+  color: $primaryHoverColor !important;
+}
+
+/* ------------------TOGGLE BUTTON---------------*/
+
 
