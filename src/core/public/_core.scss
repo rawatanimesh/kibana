@@ -108,6 +108,16 @@
   background-color: $primaryColor !important;
   border-color: $primaryColor !important;
 }
+// .euiButton--secondary.euiButton--fill{
+//   background-color: $primaryColor !important;
+//   border-color: $primaryColor !important;
+// }
+.euiButton:disabled.euiButton--fill{
+  background-color: $greyColor3 !important;
+  border-color: $greyColor3 !important;
+  color: $greyColor4 !important;
+  opacity: .5 !important;
+}
 
 /* ------------------LINK BUTTON--------------- */
 
@@ -128,6 +138,9 @@
   text-decoration: none !important;
   background: transparent !important;
 }
+.euiLink.euiLink--text:focus{
+  outline: none !important;
+}
 
 /* ------------------LINK BUTTON 2----------------*/
 
@@ -140,6 +153,11 @@
 }
 .euiButtonEmpty--primary:focus{
   background-color: transparent;
+}
+.euiButtonEmpty:disabled{
+  // background-color: $greyColor3 !important;
+  color: $greyColor4 !important;
+  opacity: .5 !important;
 }
 
 
@@ -189,14 +207,14 @@
   color: $redColor2 !important;
 }
 .euiTab.euiTab-isSelected:hover{
-  color: $redColor3;
+  color: $primaryHoverColor;
 }
 .euiTab.euiTab-isSelected::after{
   background-color: $redColor2 !important;
 }
 .euiTab:hover:not(.euiTab-isSelected){
   text-decoration: none;
-  color: $redColor3;
+  color: $primaryHoverColor;
 }
 
 /* ------------------HEADER ICONS---------------*/
@@ -216,5 +234,24 @@
 }
 
 /* ------------------TOGGLE BUTTON---------------*/
+
+/* ------------------CHECKBOX---------------*/
+.euiCheckbox .euiCheckbox__input + .euiCheckbox__square{
+  box-shadow: none !important;
+  border: 2px solid $greyColor1 !important;
+}
+.euiCheckbox .euiCheckbox__input:focus + .euiCheckbox__square, .euiCheckbox .euiCheckbox__input:active:not(:disabled) + .euiCheckbox__square{
+  animation: none !important;
+  border-color: $primaryHoverColor !important;
+}
+.euiCheckbox .euiCheckbox__input:hover + .euiCheckbox__square, .euiCheckbox .euiCheckbox__input:active:not(:disabled) + .euiCheckbox__square{
+  animation: none !important;
+  border-color: $primaryHoverColor !important;
+}
+// :checked
+.euiCheckbox .euiCheckbox__input:checked + .euiCheckbox__square{
+  border: 2px solid $redColor2 !important;
+  background-color: $redColor2 !important;
+}
 
 
